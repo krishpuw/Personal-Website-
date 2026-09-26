@@ -664,10 +664,19 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   font-family: var(--font-mono);
   font-size: 30px;
   font-weight: 700;
   color: var(--accent);
+}
+
+.hero-panel__avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 999px;
+  display: block;
 }
 
 .hero-chip {
