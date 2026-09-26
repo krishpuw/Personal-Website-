@@ -104,13 +104,16 @@
           <span class="hero-chip__dot" style="background:var(--accent)"></span>
           <p class="hero-chip__label">OPEN TO OPPORTUNITIES</p>
         </div>
-        <div class="hero-chip hero-chip--2" style="border-color:var(--secondary)">
+        <!-- <div class="hero-chip hero-chip--2" style="border-color:var(--secondary)">
           <span class="hero-chip__dot" style="background:var(--secondary)"></span>
           <p class="hero-chip__label">MS CS @ UNIVERSITY AT BUFFALO</p>
-        </div>
+        </div> -->
         <div class="hero-chip hero-chip--3" style="border-color:var(--primary)">
           <span class="hero-chip__dot" style="background:var(--primary)"></span>
           <p class="hero-chip__label">CCNA IN PROGRESS</p>
+          <div class="hero-chip hero-chip--3" style="border-color:var(--primary)">
+          <span class="hero-chip__dot" style="background:var(--primary)"></span>
+          <p class="hero-chip__label">Security+  IN  PROGRESS </p>
         </div>
       </div>
     </div>
@@ -132,19 +135,22 @@
         <div class="reveal" style="transition-delay:80ms">
           <div class="card about-bio">
             <div class="about-bio__image bg-grid"></div>
-            <p>I'm pursuing an MS in Computer Science at the University at Buffalo, specializing in Computer Security and Privacy, expected December 2027. Before that, I completed my BS in Computer Engineering at UB (Cum Laude, 3.44 GPA), which gave me a hardware-level foundation — ARM microcontrollers, FPGA/VHDL, embedded systems — that still shapes how I think about securing real systems, not just code.</p>
-            <p>Currently, I'm a Research Assistant under Prof. Hongxin Hu, building AI security labs, and I build hands-on cloud security projects in my own time — a cloud-native SIEM on AWS, a gamified cybersecurity education platform, and more — to close the gap between what I study and what I can actually ship. I'm actively seeking Summer 2027 internships and full-time roles for 2028 in cybersecurity, cloud, and infrastructure.</p>
+            <!-- <p>I'm pursuing an MS in Computer Science at the University at Buffalo, specializing in Computer Security and Privacy, expected December 2027. Before that, I completed my BS in Computer Engineering at UB (Cum Laude, 3.44 GPA), which gave me a hardware-level foundation — ARM microcontrollers, FPGA/VHDL, embedded systems — that still shapes how I think about securing real systems, not just code.</p> -->
+            <p>During my undergrad, I interned as a Security Engineer at Zayed University and as an Undergraduate Research Intern on integrated systems for a SPIR-funded project (Strategic Partnership for Industrial Resurgence, a SUNY grant program) under UB's Wireless Networks lab — experiences that pushed me toward security work grounded in real infrastructure rather than just theory.</p>
           </div>
         </div>
 
-        <div class="reveal" style="transition-delay:140ms">
+      <div class="reveal" style="transition-delay:140ms">
           <div class="about-cards">
             <div class="about-card card card-lift">
               <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-lg" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
               <p class="about-card__label" style="color:var(--accent)">[ EDUCATION ]</p>
-              <p class="about-card__body">MS in Computer Science (Computer Security &amp; Privacy), University at Buffalo — expected Dec 2027. BS in Computer Engineering, UB — Cum Laude, 3.44 GPA.</p>
+              <ul class="about-card__list">
+                <li>Master of Science in Computer Science, Computer Security &amp; Privacy specialization — University at Buffalo, expected December 2027</li>
+                <li>Bachelor of Science in Computer Engineering, University at Buffalo — Cum Laude, May 2026</li>
+              </ul>
             </div>
-            <div class="about-card card card-lift">
+            <!-- <div class="about-card card card-lift">
               <svg viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-lg" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3M12 12V8"/></svg>
               <p class="about-card__label" style="color:var(--secondary)">[ SPECIALIZATION ]</p>
               <p class="about-card__body">Cloud security and detection engineering — AWS, SIEM &amp; threat-intel pipelines, MITRE ATT&amp;CK-based defense, and network security.</p>
@@ -153,11 +159,17 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-lg" aria-hidden="true"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
               <p class="about-card__label" style="color:var(--primary)">[ METRICS ]</p>
               <p class="about-card__body">Built 10 MITRE ATT&amp;CK-mapped detection rules generating 150 alerts across 300 mock logs in a self-built AWS SIEM.</p>
-            </div>
+            </div> -->
             <div class="about-card card card-lift">
               <svg viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-lg" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
               <p class="about-card__label" style="color:var(--success)">[ INTERESTS ]</p>
-              <p class="about-card__body">Aviation, RF &amp; wireless systems, and building tools that make security concepts easier to learn.</p>
+              <p class="about-card__intro">Outside of tech and studying, I'm into:</p>
+              <ul class="about-card__list">
+                <li>🏎️ Formula 1</li>
+                <li>🎾 Tennis</li>
+                <li>🏏 Cricket</li>
+                <li>💪 Gym</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -178,13 +190,14 @@
       </div>
 
       <div class="timeline">
+
         <div class="reveal">
           <div class="timeline-item card card-lift">
             <div class="timeline-item__marker">
               <span class="timeline-item__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M10 2v7.5L4.5 19A2 2 0 0 0 6.2 22h11.6a2 2 0 0 0 1.7-3L14 9.5V2"/><path d="M8.5 2h7"/><path d="M7 15h10"/></svg>
               </span>
-              <p class="timeline-item__period">2026 — Present</p>
+              <p class="timeline-item__period">Aug 2026 — Present</p>
             </div>
             <div class="timeline-item__body">
               <div class="timeline-item__head">
@@ -194,7 +207,7 @@
                 </div>
                 <span class="badge-current">CURRENT</span>
               </div>
-              <p class="timeline-item__desc">Building AI security labs under Prof. Hongxin Hu, working at the intersection of AI systems and security research.</p>
+              <p class="timeline-item__desc">Building AI security labs, working at the intersection of AI systems and security research.</p>
               <div class="tag-row">
                 <span class="tag">AI Security</span>
                 <span class="tag">Research</span>
@@ -207,22 +220,23 @@
           <div class="timeline-item card card-lift">
             <div class="timeline-item__marker">
               <span class="timeline-item__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M4.9 4.9a10 10 0 0 0 0 14.2M19.1 4.9a10 10 0 0 1 0 14.2M7.8 7.8a6 6 0 0 0 0 8.4M16.2 7.8a6 6 0 0 1 0 8.4"/><circle cx="12" cy="12" r="2"/></svg>
               </span>
-              <p class="timeline-item__period">2025 — 2026</p>
+              <p class="timeline-item__period">Feb 2026 — May 2026</p>
             </div>
             <div class="timeline-item__body">
               <div class="timeline-item__head">
                 <div class="timeline-item__title">
-                  <h3>Research Engineer</h3>
-                  <span class="timeline-item__company">@ WN4SS Lab, University at Buffalo</span>
+                  <h3>Undergraduate Research Engineer</h3>
+                  <span class="timeline-item__company">@ Integrated Systems &middot; WN4SS Lab, University at Buffalo</span>
                 </div>
               </div>
-              <p class="timeline-item__desc">Built GPROP, a physics-based RF propagation modeling platform, under Prof. Filippo Malandra. Owned the containerization work — multi-stage Docker builds resolving GDAL/GEOS/PROJ/PDAL dependencies — plus documentation, and helped move the architecture to a C GUI + Docker backend.</p>
+              <p class="timeline-item__desc">Contributed to GPROP, a platform that turns raw LiDAR terrain data into RF signal coverage maps for wireless network planning — built in C through an SRIP-funded research program, publication in progress. Owned the containerized infrastructure and Bash automation behind the build pipeline.</p>
               <div class="tag-row">
                 <span class="tag">RF Modeling</span>
                 <span class="tag">Docker</span>
-                <span class="tag">GDAL / GEOS / PROJ</span>
+                <span class="tag">Bash</span>
+                <span class="tag">Linux</span>
               </div>
             </div>
           </div>
@@ -232,9 +246,35 @@
           <div class="timeline-item card card-lift">
             <div class="timeline-item__marker">
               <span class="timeline-item__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
               </span>
-              <p class="timeline-item__period">2023 — 2026</p>
+              <p class="timeline-item__period">Jul 2025 — Aug 2025</p>
+            </div>
+            <div class="timeline-item__body">
+              <div class="timeline-item__head">
+                <div class="timeline-item__title">
+                  <h3>Security Engineering Intern</h3>
+                  <span class="timeline-item__company">@ Zayed University, Abu Dhabi, UAE</span>
+                </div>
+              </div>
+              <p class="timeline-item__desc">Worked in a live Security Operations Center, building a full-stack SOC training platform and running adversary emulation with MITRE Caldera alongside Wazuh monitoring for detection-and-response exercises.</p>
+              <div class="tag-row">
+                <span class="tag">SOC Operations</span>
+                <span class="tag">MITRE ATT&amp;CK</span>
+                <span class="tag">Caldera</span>
+                <span class="tag">Wazuh</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay:135ms">
+          <div class="timeline-item card card-lift">
+            <div class="timeline-item__marker">
+              <span class="timeline-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+              <p class="timeline-item__period">Jun 2024 — Feb 2026</p>
             </div>
             <div class="timeline-item__body">
               <div class="timeline-item__head">
@@ -243,7 +283,7 @@
                   <span class="timeline-item__company">@ UB Hacking</span>
                 </div>
               </div>
-              <p class="timeline-item__desc">Rose from Food Lead to Organizing Team Lead to Director of UB Hacking, UB's largest student-run hackathon, leading the team that plans and runs the event end to end.</p>
+              <p class="timeline-item__desc">Rose from Food Lead to Director of UB's largest student-run hackathon. Led a team of 20 across engineering, sponsorship, logistics, and marketing, and served as primary contact for sponsors, judges, and university administration.</p>
               <div class="tag-row">
                 <span class="tag">Leadership</span>
                 <span class="tag">Event Operations</span>
@@ -257,26 +297,75 @@
           <div class="timeline-item card card-lift">
             <div class="timeline-item__marker">
               <span class="timeline-item__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
               </span>
-              <p class="timeline-item__period">2024 — Present</p>
+              <p class="timeline-item__period">Oct 2023 — May 2026</p>
             </div>
             <div class="timeline-item__body">
               <div class="timeline-item__head">
                 <div class="timeline-item__title">
-                  <h3>Tutor</h3>
-                  <span class="timeline-item__company">@ TASS Center, University at Buffalo</span>
+                  <h3>Academic Tutor</h3>
+                  <span class="timeline-item__company">@ University at Buffalo</span>
                 </div>
               </div>
-              <p class="timeline-item__desc">Tutor undergraduate students in technical coursework through UB's TASS center, helping them work through core CS and engineering concepts.</p>
+              <p class="timeline-item__desc">Tutored introductory computer science courses and Calculus I &amp; II, breaking down complex concepts and adapting to each student's learning style. Helped organize and lead group study sessions.</p>
               <div class="tag-row">
                 <span class="tag">Teaching</span>
                 <span class="tag">Mentorship</span>
-                <span class="tag">Computer Science</span>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="reveal" style="transition-delay:225ms">
+          <div class="timeline-item card card-lift">
+            <div class="timeline-item__marker">
+              <span class="timeline-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg>
+              </span>
+              <p class="timeline-item__period">Sep 2023 — May 2024</p>
+            </div>
+            <div class="timeline-item__body">
+              <div class="timeline-item__head">
+                <div class="timeline-item__title">
+                  <h3>Senator</h3>
+                  <span class="timeline-item__company">@ Residence Hall Association, University at Buffalo</span>
+                </div>
+              </div>
+              <p class="timeline-item__desc">Led Senate meetings representing on-campus residents, working with fellow senators and administration on initiatives to improve the residential experience.</p>
+              <div class="tag-row">
+                <span class="tag">Student Government</span>
+                <span class="tag">Advocacy</span>
+                <span class="tag">Teamwork</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay:270ms">
+          <div class="timeline-item card card-lift">
+            <div class="timeline-item__marker">
+              <span class="timeline-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </span>
+              <p class="timeline-item__period">Oct 2021</p>
+            </div>
+            <div class="timeline-item__body">
+              <div class="timeline-item__head">
+                <div class="timeline-item__title">
+                  <h3>Student Intern</h3>
+                  <span class="timeline-item__company">@ IBM</span>
+                </div>
+              </div>
+              <p class="timeline-item__desc">Designed Healthease, a health analytics platform for hospitals — selected as 1 of 27 students out of 10,000 applicants.</p>
+              <div class="tag-row">
+                <span class="tag">Product Design</span>
+                <span class="tag">Health Analytics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
