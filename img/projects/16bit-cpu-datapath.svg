@@ -1,0 +1,160 @@
+<svg viewBox="0 0 1200 568" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono','Fira Code',monospace">
+  <defs>
+    <marker id="arrowAccent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#00f0ff"/>
+    </marker>
+    <marker id="arrowPrimary" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#3b82f6"/>
+    </marker>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#1e2942" />
+    </pattern>
+    <linearGradient id="boxFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#11192e"/>
+      <stop offset="1" stop-color="#0d1321"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="568" fill="#070a10"/>
+  <rect x="0" y="0" width="1200" height="568" fill="url(#dots)"/>
+
+  <text x="24" y="34" fill="#6b7280" font-size="12" letter-spacing="2">16-BIT SINGLE-CYCLE DATAPATH · VERILOG / BASYS 3 FPGA</text>
+
+  <!-- ================= Control lines (drawn first, under blocks) ================= -->
+  <g stroke="#3b82f6" stroke-width="1.6" stroke-dasharray="4 4" fill="none" opacity="0.85">
+    <path d="M 500,120 L 500,170" marker-end="url(#arrowPrimary)"/>
+    <path d="M 500,120 L 220,120 L 220,300" marker-end="url(#arrowPrimary)"/>
+    <path d="M 580,120 L 700,120 L 700,190" marker-end="url(#arrowPrimary)"/>
+    <path d="M 580,150 L 660,150 L 660,395 L 705,395" marker-end="url(#arrowPrimary)"/>
+    <path d="M 500,150 L 500,395 L 610,395" marker-end="url(#arrowPrimary)"/>
+    <path d="M 580,135 L 870,135 L 870,255" marker-end="url(#arrowPrimary)"/>
+    <path d="M 580,105 L 1010,105 L 1010,255" marker-end="url(#arrowPrimary)"/>
+  </g>
+  <g font-size="10" fill="#3b82f6">
+    <text x="530" y="167">RegWrite</text>
+    <text x="228" y="230">PCSrc</text>
+    <text x="706" y="210">ALUOp</text>
+    <text x="606" y="243">ALUSrc</text>
+    <text x="505" y="300">MemtoReg</text>
+    <text x="852" y="218">MemRead /</text>
+    <text x="852" y="230">MemWrite</text>
+    <text x="1000" y="218">RegDst</text>
+  </g>
+
+  <!-- ================= Data path lines ================= -->
+  <g stroke="#00f0ff" stroke-width="2" fill="none">
+    <!-- PC -> +2 adder loop -->
+    <path d="M 70,235 L 70,205 L 130,205 L 130,235" marker-end="url(#arrowAccent)"/>
+    <!-- +2 result back to PC input -->
+    <path d="M 40,205 L 40,170 L 90,170 L 90,235" marker-end="url(#arrowAccent)"/>
+    <!-- PC -> Instruction Memory -->
+    <path d="M 150,270 L 200,270" marker-end="url(#arrowAccent)"/>
+    <!-- Instruction Memory -> Register File -->
+    <path d="M 340,255 L 370,255 L 370,225 L 420,225" marker-end="url(#arrowAccent)"/>
+    <path d="M 340,285 L 380,285 L 380,255 L 420,255" marker-end="url(#arrowAccent)"/>
+    <!-- Instruction Memory -> Sign Extension -->
+    <path d="M 340,300 L 390,300 L 390,420 L 420,420" marker-end="url(#arrowAccent)"/>
+    <!-- Instruction Memory -> Control Unit -->
+    <path d="M 300,240 L 300,90 L 420,90" marker-end="url(#arrowAccent)"/>
+    <!-- Instruction Memory -> ALU Control (funct bits) -->
+    <path d="M 320,300 L 320,470 L 705,470" marker-end="url(#arrowAccent)"/>
+    <!-- Register File rs -> ALU -->
+    <path d="M 560,220 L 620,220 L 620,245 L 705,245" marker-end="url(#arrowAccent)"/>
+    <!-- Register File rt -> MUX -->
+    <path d="M 560,260 L 600,260 L 600,300 L 630,300" marker-end="url(#arrowAccent)"/>
+    <!-- Sign Extension -> MUX -->
+    <path d="M 560,420 L 660,420 L 660,340" marker-end="url(#arrowAccent)"/>
+    <!-- MUX -> ALU input B -->
+    <path d="M 680,300 L 705,300" marker-end="url(#arrowAccent)"/>
+    <!-- ALU -> Data Memory address -->
+    <path d="M 820,270 L 920,270" marker-end="url(#arrowAccent)"/>
+    <!-- ALU -> WB mux (bypass) -->
+    <path d="M 800,240 L 800,140 L 1140,140 L 1140,290" marker-end="url(#arrowAccent)"/>
+    <!-- Data Memory -> WB mux -->
+    <path d="M 1060,300 L 1110,300 L 1110,320" marker-end="url(#arrowAccent)"/>
+    <!-- WB mux -> Register File write data (feedback path) -->
+    <path d="M 1140,340 L 1140,500 L 490,500 L 490,270 L 420,270" marker-end="url(#arrowAccent)"/>
+  </g>
+
+  <!-- ================= Blocks ================= -->
+  <!-- PC -->
+  <g>
+    <rect x="30" y="235" width="120" height="70" rx="8" fill="url(#boxFill)" stroke="#00f0ff" stroke-width="1.4"/>
+    <text x="90" y="264" text-anchor="middle" fill="#f3f4f6" font-size="14" font-weight="700">PC</text>
+    <text x="90" y="282" text-anchor="middle" fill="#6b7280" font-size="9">program_counter.v</text>
+  </g>
+  <text x="60" y="200" fill="#9ca3af" font-size="10">+2</text>
+
+  <!-- Instruction Memory -->
+  <g>
+    <rect x="200" y="235" width="140" height="90" rx="8" fill="url(#boxFill)" stroke="#00f0ff" stroke-width="1.4"/>
+    <text x="270" y="272" text-anchor="middle" fill="#f3f4f6" font-size="13" font-weight="700">Instruction</text>
+    <text x="270" y="288" text-anchor="middle" fill="#f3f4f6" font-size="13" font-weight="700">Memory</text>
+    <text x="270" y="308" text-anchor="middle" fill="#6b7280" font-size="9">instruction_memory.v</text>
+  </g>
+
+  <!-- Control Unit -->
+  <g>
+    <rect x="420" y="55" width="160" height="65" rx="8" fill="url(#boxFill)" stroke="#3b82f6" stroke-width="1.4"/>
+    <text x="500" y="82" text-anchor="middle" fill="#f3f4f6" font-size="13" font-weight="700">Control Unit</text>
+    <text x="500" y="99" text-anchor="middle" fill="#6b7280" font-size="9">control_unit.v</text>
+  </g>
+
+  <!-- Register File -->
+  <g>
+    <rect x="420" y="195" width="140" height="100" rx="8" fill="url(#boxFill)" stroke="#00f0ff" stroke-width="1.4"/>
+    <text x="490" y="235" text-anchor="middle" fill="#f3f4f6" font-size="13" font-weight="700">Register</text>
+    <text x="490" y="251" text-anchor="middle" fill="#f3f4f6" font-size="13" font-weight="700">File</text>
+    <text x="490" y="270" text-anchor="middle" fill="#6b7280" font-size="9">register_file.v</text>
+    <text x="490" y="283" text-anchor="middle" fill="#6b7280" font-size="9">16 x 16-bit</text>
+  </g>
+
+  <!-- Sign Extension -->
+  <g>
+    <rect x="420" y="395" width="140" height="60" rx="8" fill="url(#boxFill)" stroke="#00f0ff" stroke-width="1.4"/>
+    <text x="490" y="422" text-anchor="middle" fill="#f3f4f6" font-size="12" font-weight="700">Sign Extend</text>
+    <text x="490" y="440" text-anchor="middle" fill="#6b7280" font-size="9">sign_extension.v</text>
+  </g>
+
+  <!-- ALU Control -->
+  <g>
+    <rect x="705" y="445" width="130" height="55" rx="8" fill="url(#boxFill)" stroke="#3b82f6" stroke-width="1.4"/>
+    <text x="770" y="470" text-anchor="middle" fill="#f3f4f6" font-size="12" font-weight="700">ALU Control</text>
+    <text x="770" y="487" text-anchor="middle" fill="#6b7280" font-size="9">alu_control.v</text>
+  </g>
+
+  <!-- MUX (ALU B select) -->
+  <g>
+    <path d="M 630,280 L 680,290 L 680,330 L 630,340 L 645,310 Z" fill="url(#boxFill)" stroke="#00f0ff" stroke-width="1.4"/>
+    <text x="655" y="313" text-anchor="middle" fill="#f3f4f6" font-size="9" font-weight="700">MUX</text>
+  </g>
+
+  <!-- ALU -->
+  <g>
+    <path d="M 705,225 L 815,245 L 815,335 L 705,355 L 725,290 Z" fill="url(#boxFill)" stroke="#00f0ff" stroke-width="1.4"/>
+    <text x="755" y="288" text-anchor="middle" fill="#f3f4f6" font-size="14" font-weight="700">ALU</text>
+    <text x="755" y="304" text-anchor="middle" fill="#6b7280" font-size="9">ALU.v</text>
+  </g>
+
+  <!-- Data Memory -->
+  <g>
+    <rect x="920" y="225" width="140" height="100" rx="8" fill="url(#boxFill)" stroke="#00f0ff" stroke-width="1.4"/>
+    <text x="990" y="264" text-anchor="middle" fill="#f3f4f6" font-size="13" font-weight="700">Data</text>
+    <text x="990" y="280" text-anchor="middle" fill="#f3f4f6" font-size="13" font-weight="700">Memory</text>
+    <text x="990" y="300" text-anchor="middle" fill="#6b7280" font-size="9">data_memory.v</text>
+  </g>
+
+  <!-- WB MUX -->
+  <g>
+    <path d="M 1110,270 L 1160,285 L 1160,325 L 1110,340 L 1128,305 Z" fill="url(#boxFill)" stroke="#00f0ff" stroke-width="1.4"/>
+    <text x="1135" y="308" text-anchor="middle" fill="#f3f4f6" font-size="9" font-weight="700">MUX</text>
+  </g>
+
+  <!-- Legend -->
+  <g font-size="10">
+    <line x1="900" y1="530" x2="930" y2="530" stroke="#00f0ff" stroke-width="2"/>
+    <text x="936" y="534" fill="#9ca3af">16-bit data path</text>
+    <line x1="1060" y1="530" x2="1090" y2="530" stroke="#3b82f6" stroke-width="1.6" stroke-dasharray="4 4"/>
+    <text x="1096" y="534" fill="#9ca3af">control signal</text>
+  </g>
+</svg>
