@@ -1017,6 +1017,16 @@ textarea {
   color: var(--faint);
 }
 
+.project-card__image-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  z-index: 0;
+}
+
 .project-card__category {
   position: relative;
   z-index: 2;
