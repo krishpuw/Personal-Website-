@@ -1091,6 +1091,22 @@ textarea {
   color: var(--accent);
 }
 
+.project-links-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.project-links-row .project-link {
+  margin-top: 0;
+}
+
+.project-link--docs:hover {
+  color: var(--accent);
+}
+
 .icon-sm {
   width: 14px;
   height: 14px;
