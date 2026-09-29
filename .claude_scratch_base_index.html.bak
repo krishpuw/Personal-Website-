@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Krish Puwar — Cloud &amp; Security Engineer</title>
+<meta name="description" content="Krish Puwar — MS Computer Science student at the University at Buffalo specializing in Computer Security &amp; Privacy. Cloud security, detection engineering, and RF systems research." />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="#top" class="nav__brand">
+      <span class="nav__badge">KP</span>
+      <span class="nav__name">KRISH PUWAR</span>
+    </a>
+
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#about" data-section="about">About</a></li>
+      <li><a href="#experience" data-section="experience">Experience</a></li>
+      <li><a href="#projects" data-section="projects">Projects</a></li>
+      <li><a href="#skills" data-section="skills">Skills</a></li>
+      <li><a href="#contact" data-section="contact">Contact</a></li>
+    </ul>
+
+    <div class="nav__actions">
+      <a href="https://github.com/krishpuw" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="icon-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="icon" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.17.69-3.84-1.34-3.84-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.94.1-.73.4-1.24.72-1.52-2.53-.29-5.19-1.27-5.19-5.63 0-1.24.44-2.26 1.17-3.06-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.17a10.9 10.9 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.57.23 2.73.11 3.02.73.8 1.17 1.82 1.17 3.06 0 4.37-2.66 5.34-5.2 5.62.41.36.77 1.06.77 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A11.26 11.26 0 0 0 23.25 11.75C23.25 5.48 18.27.5 12 .5Z"/></svg>
+      </a>
+      <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="icon-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="icon" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+      </a>
+      <a href="mailto:you@example.com" aria-label="Email" class="icon-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+      </a>
+
+      <span class="status-pill">
+        <span class="status-dot">
+          <span class="pulse-ring"></span>
+          <span class="status-dot__core"></span>
+        </span>
+        OPEN TO OPPORTUNITIES
+      </span>
+
+      <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" id="menuIconOpen" aria-hidden="true"><path d="M4 12h16M4 6h16M4 18h16"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" id="menuIconClose" style="display:none" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__inner">
+      <ul id="mobileNavLinks">
+        <li><a href="#about" data-section="about">About</a></li>
+        <li><a href="#experience" data-section="experience">Experience</a></li>
+        <li><a href="#projects" data-section="projects">Projects</a></li>
+        <li><a href="#skills" data-section="skills">Skills</a></li>
+        <li><a href="#contact" data-section="contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===================== Hero ===================== -->
+  <section id="top" class="hero container">
+    <div class="hero__content reveal">
+      <div class="hero-badge">
+        <span class="eyebrow__dot"></span>
+        <p class="eyebrow__text">Cybersecurity • Cloud • Infrastructure</p>
+      </div>
+
+      <h1>Hi, I'm Krish Puwar.</h1>
+      <p class="hero__tagline">I build the systems that detect, contain, and secure infrastructure — managing risk before it becomes an incident.</p>
+      <p class="hero__about"> I'm working to break into the industry — actively seeking Summer 2027 internships and full-time roles for 2028 in cybersecurity, cloud, and infrastructure.</p>
+
+      <div class="hero__ctas">
+        <a href="#projects" class="btn btn-primary">
+          View Projects
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          Download Resume
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="hero__visual reveal" style="transition-delay:120ms">
+      <div class="hero-panel bg-grid">
+        <div class="hero-panel__glow"></div>
+        <div class="hero-panel__ring">
+          <div class="hero-panel__dashed spin-slow"></div>
+          <div class="hero-panel__avatar">
+            <img src="img/profile.jpg" alt="Krish Puwar" class="hero-panel__avatar-img" />
+          </div>
+        </div>
+
+        <div class="hero-chip hero-chip--1" style="border-color:var(--accent)">
+          <span class="hero-chip__dot" style="background:var(--accent)"></span>
+          <p class="hero-chip__label">OPEN TO OPPORTUNITIES</p>
+        </div>
+        <!-- <div class="hero-chip hero-chip--2" style="border-color:var(--secondary)">
+          <span class="hero-chip__dot" style="background:var(--secondary)"></span>
+          <p class="hero-chip__label">MS CS @ UNIVERSITY AT BUFFALO</p>
+        </div> -->
+        <div class="hero-chip hero-chip--3" style="border-color:var(--primary)">
+          <span class="hero-chip__dot" style="background:var(--primary)"></span>
+          <p class="hero-chip__label">CCNA IN PROGRESS</p>
+          <div class="hero-chip hero-chip--3" style="border-color:var(--primary)">
+          <span class="hero-chip__dot" style="background:var(--primary)"></span>
+          <p class="hero-chip__label">Security+  IN  PROGRESS </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== About ===================== -->
+  <section id="about" class="section section--bg">
+    <div class="container">
+      <div class="reveal">
+        <div class="eyebrow">
+          <span class="eyebrow__dot"></span>
+          <p class="eyebrow__text">01. About</p>
+        </div>
+        <h2 class="section-heading">The Professional Behind the Work</h2>
+        <p class="section-sub">A quick look at background, focus areas, and what drives the work.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="reveal" style="transition-delay:80ms">
+          <div class="card about-bio">
+            <div class="about-bio__image bg-grid"></div>
+            <!-- <p>I'm pursuing an MS in Computer Science at the University at Buffalo, specializing in Computer Security and Privacy, expected December 2027. Before that, I completed my BS in Computer Engineering at UB (Cum Laude, 3.44 GPA), which gave me a hardware-level foundation — ARM microcontrollers, FPGA/VHDL, embedded systems — that still shapes how I think about securing real systems, not just code.</p> -->
+            <p>During my undergrad, I interned as a Security Engineer at Zayed University and as an Undergraduate Research Intern on integrated systems for a SPIR-funded project (Strategic Partnership for Industrial Resurgence, a SUNY grant program) under UB's Wireless Networks lab — experiences that pushed me toward security work grounded in real infrastructure rather than just theory.</p>
+          </div>
+        </div>
+
+      <div class="reveal" style="transition-delay:140ms">
+          <div class="about-cards">
+            <div class="about-card card card-lift">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-lg" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+              <p class="about-card__label" style="color:var(--accent)">[ EDUCATION ]</p>
+              <ul class="about-card__list">
+                <li>Master of Science in Computer Science, Computer Security &amp; Privacy specialization — University at Buffalo, expected December 2027</li>
+                <li>Bachelor of Science in Computer Engineering, University at Buffalo — Cum Laude, May 2026</li>
+              </ul>
+            </div>
+            <!-- <div class="about-card card card-lift">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-lg" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3M12 12V8"/></svg>
+              <p class="about-card__label" style="color:var(--secondary)">[ SPECIALIZATION ]</p>
+              <p class="about-card__body">Cloud security and detection engineering — AWS, SIEM &amp; threat-intel pipelines, MITRE ATT&amp;CK-based defense, and network security.</p>
+            </div>
+            <div class="about-card card card-lift">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-lg" aria-hidden="true"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+              <p class="about-card__label" style="color:var(--primary)">[ METRICS ]</p>
+              <p class="about-card__body">Built 10 MITRE ATT&amp;CK-mapped detection rules generating 150 alerts across 300 mock logs in a self-built AWS SIEM.</p>
+            </div> -->
+            <div class="about-card card card-lift">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-lg" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+              <p class="about-card__label" style="color:var(--success)">[ INTERESTS ]</p>
+              <p class="about-card__intro">Outside of tech and studying, I'm into:</p>
+              <ul class="about-card__list">
+                <li>🏎️ Formula 1</li>
+                <li>🎾 Tennis</li>
+                <li>🏏 Cricket</li>
+                <li>💪 Gym</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Experience ===================== -->
+  <section id="experience" class="section section--void">
+    <div class="container">
+      <div class="reveal">
+        <div class="eyebrow">
+          <span class="eyebrow__dot"></span>
+          <p class="eyebrow__text">02. Experience</p>
+        </div>
+        <h2 class="section-heading">Professional Milestones</h2>
+        <p class="section-sub">A timeline of roles, responsibilities, and what came out of them.</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="reveal">
+          <div class="timeline-item card card-lift">
+            <div class="timeline-item__marker">
+              <span class="timeline-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M10 2v7.5L4.5 19A2 2 0 0 0 6.2 22h11.6a2 2 0 0 0 1.7-3L14 9.5V2"/><path d="M8.5 2h7"/><path d="M7 15h10"/></svg>
+              </span>
+              <p class="timeline-item__period">August 2026 — Present</p>
+            </div>
+            <div class="timeline-item__body">
+              <div class="timeline-item__head">
+                <div class="timeline-item__title">
+                  <h3>Research Assistant</h3>
+                  <span class="timeline-item__company">@ Dr. Hongxin Hu's Lab, University at Buffalo</span>
+                </div>
+                <span class="badge-current">CURRENT</span>
+              </div>
+              <p class="timeline-item__desc">Building AI security labs, working at the intersection of AI systems and security research.</p>
+              <div class="tag-row">
+                <span class="tag">AI Security</span>
+                <span class="tag">Research</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay:45ms">
+          <div class="timeline-item card card-lift">
+            <div class="timeline-item__marker">
+              <span class="timeline-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M4.9 4.9a10 10 0 0 0 0 14.2M19.1 4.9a10 10 0 0 1 0 14.2M7.8 7.8a6 6 0 0 0 0 8.4M16.2 7.8a6 6 0 0 1 0 8.4"/><circle cx="12" cy="12" r="2"/></svg>
+              </span>
+              <p class="timeline-item__period">February 2026 — May 2026</p>
+            </div>
+            <div class="timeline-item__body">
+              <div class="timeline-item__head">
+                <div class="timeline-item__title">
+                  <h3>Undergraduate Research Engineer</h3>
+                  <span class="timeline-item__company">@ Integrated Systems &middot; WN4SS Lab, University at Buffalo</span>
+                </div>
+              </div>
+              <p class="timeline-item__desc">Contributed to GPROP, a platform that turns raw LiDAR terrain data into RF signal coverage maps for wireless network planning — built in C through an SRIP-funded research program, publication in progress. Owned the containerized infrastructure and Bash automation behind the build pipeline.</p>
+              <div class="tag-row">
+                <span class="tag">RF Modeling</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Bash</span>
+                <span class="tag">Linux</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay:90ms">
+          <div class="timeline-item card card-lift">
+            <div class="timeline-item__marker">
+              <span class="timeline-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+              <p class="timeline-item__period">July 2025 — August 2025</p>
+            </div>
+            <div class="timeline-item__body">
+              <div class="timeline-item__head">
+                <div class="timeline-item__title">
+                  <h3>Security Engineering Intern</h3>
+                  <span class="timeline-item__company">@ Zayed University, Abu Dhabi, UAE</span>
+                </div>
+              </div>
+              <p class="timeline-item__desc">Worked in a live Security Operations Center, building a full-stack SOC training platform and running adversary emulation with MITRE Caldera alongside Wazuh monitoring for detection-and-response exercises.</p>
+              <div class="tag-row">
+                <span class="tag">SOC Operations</span>
+                <span class="tag">MITRE ATT&amp;CK</span>
+                <span class="tag">Caldera</span>
+                <span class="tag">Wazuh</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay:135ms">
+          <div class="timeline-item card card-lift">
+            <div class="timeline-item__marker">
+              <span class="timeline-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+              <p class="timeline-item__period"> April 2025 — February 2026</p>
+            </div>
+            <div class="timeline-item__body">
+              <div class="timeline-item__head">
+                <div class="timeline-item__title">
+                  <h3>Director</h3>
+                  <span class="timeline-item__company">@ UB Hacking</span>
+                </div>
+              </div>
+              <p class="timeline-item__desc">Rose from Food Lead to Director of UB's largest student-run hackathon. Led a team of 20 across engineering, sponsorship, logistics, and marketing, and served as primary contact for sponsors, judges, and university administration.</p>
+              <div class="tag-row">
+                <span class="tag">Leadership</span>
+                <span class="tag">Event Operations</span>
+                <span class="tag">Team Management</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay:180ms">
+          <div class="timeline-item card card-lift">
+            <div class="timeline-item__marker">
+              <span class="timeline-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+              </span>
+              <p class="timeline-item__period">October 2023 — May 2026</p>
+            </div>
+            <div class="timeline-item__body">
+              <div class="timeline-item__head">
+                <div class="timeline-item__title">
+                  <h3>Academic Tutor</h3>
+                  <span class="timeline-item__company">@ University at Buffalo</span>
+                </div>
+              </div>
+              <p class="timeline-item__desc">Tutored introductory computer science courses and Calculus I &amp; II, breaking down complex concepts and adapting to each student's learning style. Helped organize and lead group study sessions.</p>
+              <div class="tag-row">
+                <span class="tag">Teaching</span>
+                <span class="tag">Mentorship</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay:225ms">
+          <div class="timeline-item card card-lift">
+            <div class="timeline-item__marker">
+              <span class="timeline-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg>
+              </span>
+              <p class="timeline-item__period"> August 2023 — May 2024</p>
+            </div>
+            <div class="timeline-item__body">
+              <div class="timeline-item__head">
+                <div class="timeline-item__title">
+                  <h3>Senator</h3>
+                  <span class="timeline-item__company">@ Residence Hall Association, University at Buffalo</span>
+                </div>
+              </div>
+              <p class="timeline-item__desc">Led Senate meetings representing on-campus residents, working with fellow senators and administration on initiatives to improve the residential experience.</p>
+              <div class="tag-row">
+                <span class="tag">Student Government</span>
+                <span class="tag">Advocacy</span>
+                <span class="tag">Teamwork</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay:270ms">
+          <div class="timeline-item card card-lift">
+            <div class="timeline-item__marker">
+              <span class="timeline-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </span>
+              <p class="timeline-item__period">Oct 2021</p>
+            </div>
+            <div class="timeline-item__body">
+              <div class="timeline-item__head">
+                <div class="timeline-item__title">
+                  <h3>Student Intern</h3>
+                  <span class="timeline-item__company">@ IBM</span>
+                </div>
+              </div>
+              <p class="timeline-item__desc">Designed Healthease, a health analytics platform for hospitals — selected as 1 of 27 students out of 10,000 applicants.</p>
+              <div class="tag-row">
+                <span class="tag">Product Design</span>
+                <span class="tag">Health Analytics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Projects ===================== -->
+  <section id="projects" class="section section--bg">
+    <div class="container">
+      <div class="reveal">
+        <div class="eyebrow">
+          <span class="eyebrow__dot"></span>
+          <p class="eyebrow__text">03. Projects</p>
+        </div>
+        <h2 class="section-heading">Technical Engineering Projects</h2>
+        <p class="section-sub">Cloud security, applied ML, and systems projects — built end to end.</p>
+      </div>
+
+      <div class="project-grid">
+        <div class="reveal">
+          <div class="project-card card card-lift">
+            <a href="https://github.com/krishpuw/cloud-siem-aws" target="_blank" rel="noopener noreferrer" class="project-card__image bg-grid">
+              <span class="project-card__image-label">[ Project image ]</span>
+              <span class="project-card__category">Cloud Security</span>
+              <div class="project-card__overlay">
+                <h3 class="project-card__title">Cloud SIEM on AWS</h3>
+              </div>
+            </a>
+            <div class="project-card__body">
+              <p class="project-card__desc">A cloud-native SIEM built on AWS Lambda, S3, and DynamoDB with 10 MITRE ATT&amp;CK-mapped detection rules — generating 150 alerts across 300 mock logs. Enriches alerts with VirusTotal and AbuseIPDB threat intel, auto-blocks malicious IPs at the Security Group level, and visualizes everything through a Splunk dashboard on EC2.</p>
+              <div class="tag-row">
+                <span class="tag">AWS Lambda</span><span class="tag">DynamoDB</span><span class="tag">Splunk</span><span class="tag">MITRE ATT&amp;CK</span>
+              </div>
+              <a href="https://github.com/krishpuw/cloud-siem-aws" target="_blank" rel="noopener noreferrer" class="project-link project-link--github">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.17.69-3.84-1.34-3.84-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.94.1-.73.4-1.24.72-1.52-2.53-.29-5.19-1.27-5.19-5.63 0-1.24.44-2.26 1.17-3.06-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.17a10.9 10.9 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.57.23 2.73.11 3.02.73.8 1.17 1.82 1.17 3.06 0 4.37-2.66 5.34-5.2 5.62.41.36.77 1.06.77 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A11.26 11.26 0 0 0 23.25 11.75C23.25 5.48 18.27.5 12 .5Z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay:80ms">
+          <div class="project-card card card-lift">
+            <a href="https://github.com/krishpuw/cyber-education-platform" target="_blank" rel="noopener noreferrer" class="project-card__image bg-grid">
+              <span class="project-card__image-label">[ Project image ]</span>
+              <span class="project-card__category">Security Education</span>
+              <div class="project-card__overlay">
+                <h3 class="project-card__title">Gamified Cybersecurity Education Platform</h3>
+              </div>
+            </a>
+            <div class="project-card__body">
+              <p class="project-card__desc">A Flask + PostgreSQL platform that gamifies cybersecurity learning, using MITRE Caldera for adversary emulation and the Gemini API to chain realistic attacker TTPs — with a full backend plan for user progress, badges, and a leaderboard.</p>
+              <div class="tag-row">
+                <span class="tag">Flask</span><span class="tag">PostgreSQL</span><span class="tag">MITRE Caldera</span><span class="tag">Gemini API</span>
+              </div>
+              <a href="https://github.com/krishpuw/cyber-education-platform" target="_blank" rel="noopener noreferrer" class="project-link project-link--github">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.17.69-3.84-1.34-3.84-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.94.1-.73.4-1.24.72-1.52-2.53-.29-5.19-1.27-5.19-5.63 0-1.24.44-2.26 1.17-3.06-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.17a10.9 10.9 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.57.23 2.73.11 3.02.73.8 1.17 1.82 1.17 3.06 0 4.37-2.66 5.34-5.2 5.62.41.36.77 1.06.77 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A11.26 11.26 0 0 0 23.25 11.75C23.25 5.48 18.27.5 12 .5Z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay:160ms">
+          <div class="project-card card card-lift">
+            <a href="https://github.com/krishpuw/roboflock" target="_blank" rel="noopener noreferrer" class="project-card__image bg-grid">
+              <span class="project-card__image-label">[ Project image ]</span>
+              <span class="project-card__category">Robotics</span>
+              <div class="project-card__overlay">
+                <h3 class="project-card__title">RoboFlock — Senior Capstone</h3>
+              </div>
+            </a>
+            <div class="project-card__body">
+              <p class="project-card__desc">A ROS2-based multi-robot capstone running on NVIDIA Jetson Orin Nano boards, driving ODrive/ODESC motor controllers off Hall-effect encoder feedback — covering everything from ST-Link firmware flashing to systemd/udev device management for reliable autonomous operation.</p>
+              <div class="tag-row">
+                <span class="tag">ROS2</span><span class="tag">Jetson Orin Nano</span><span class="tag">ODrive</span><span class="tag">systemd</span>
+              </div>
+              <a href="https://github.com/krishpuw/roboflock" target="_blank" rel="noopener noreferrer" class="project-link project-link--github">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.17.69-3.84-1.34-3.84-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.94.1-.73.4-1.24.72-1.52-2.53-.29-5.19-1.27-5.19-5.63 0-1.24.44-2.26 1.17-3.06-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.17a10.9 10.9 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.57.23 2.73.11 3.02.73.8 1.17 1.82 1.17 3.06 0 4.37-2.66 5.34-5.2 5.62.41.36.77 1.06.77 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A11.26 11.26 0 0 0 23.25 11.75C23.25 5.48 18.27.5 12 .5Z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay:240ms">
+          <div class="project-card card card-lift">
+            <a href="https://github.com/krishpuw/news-bot" target="_blank" rel="noopener noreferrer" class="project-card__image bg-grid">
+              <span class="project-card__image-label">[ Project image ]</span>
+              <span class="project-card__category">Machine Learning</span>
+              <div class="project-card__overlay">
+                <h3 class="project-card__title">NEWS BOT — Fake News Detector</h3>
+              </div>
+            </a>
+            <div class="project-card__body">
+              <p class="project-card__desc">A Scikit-learn fake news classifier built around a Decision Tree model, developed for the IBM Ed Tech Youth Challenge, where it placed as a top-5 finalist.</p>
+              <div class="tag-row">
+                <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">NLP</span>
+              </div>
+              <a href="https://github.com/krishpuw/news-bot" target="_blank" rel="noopener noreferrer" class="project-link project-link--github">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.17.69-3.84-1.34-3.84-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.94.1-.73.4-1.24.72-1.52-2.53-.29-5.19-1.27-5.19-5.63 0-1.24.44-2.26 1.17-3.06-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.17a10.9 10.9 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.57.23 2.73.11 3.02.73.8 1.17 1.82 1.17 3.06 0 4.37-2.66 5.34-5.2 5.62.41.36.77 1.06.77 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A11.26 11.26 0 0 0 23.25 11.75C23.25 5.48 18.27.5 12 .5Z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Skills ===================== -->
+  <section id="skills" class="section section--void">
+    <div class="container">
+      <div class="reveal">
+        <div class="eyebrow">
+          <span class="eyebrow__dot"></span>
+          <p class="eyebrow__text">04. Skills</p>
+        </div>
+        <h2 class="section-heading">Technical Matrix</h2>
+        <p class="section-sub">Core tools and technologies across cloud security, systems, and applied ML.</p>
+      </div>
+
+      <div class="skillbar-grid">
+        <div class="reveal skillbar">
+          <div class="skillbar__head">
+            <p class="skillbar__name">Python</p>
+            <p class="skillbar__pct">90%</p>
+          </div>
+          <div class="skillbar__track"><div class="skillbar__fill" style="width:90%"></div></div>
+          <div class="skillbar__meta">
+            <span class="tag tag--level">Advanced</span>
+            <span class="tag tag--level">3+ years experience</span>
+          </div>
+        </div>
+
+        <div class="reveal skillbar" style="transition-delay:40ms">
+          <div class="skillbar__head">
+            <p class="skillbar__name">AWS &amp; Cloud Security</p>
+            <p class="skillbar__pct">85%</p>
+          </div>
+          <div class="skillbar__track"><div class="skillbar__fill" style="width:85%"></div></div>
+          <div class="skillbar__meta">
+            <span class="tag tag--level">Advanced</span>
+            <span class="tag tag--level">2+ years experience</span>
+          </div>
+        </div>
+
+        <div class="reveal skillbar" style="transition-delay:80ms">
+          <div class="skillbar__head">
+            <p class="skillbar__name">Docker &amp; Containerization</p>
+            <p class="skillbar__pct">75%</p>
+          </div>
+          <div class="skillbar__track"><div class="skillbar__fill" style="width:75%"></div></div>
+          <div class="skillbar__meta">
+            <span class="tag tag--level">Intermediate</span>
+            <span class="tag tag--level">2+ years experience</span>
+          </div>
+        </div>
+
+        <div class="reveal skillbar" style="transition-delay:120ms">
+          <div class="skillbar__head">
+            <p class="skillbar__name">SIEM &amp; Detection Engineering</p>
+            <p class="skillbar__pct">70%</p>
+          </div>
+          <div class="skillbar__track"><div class="skillbar__fill" style="width:70%"></div></div>
+          <div class="skillbar__meta">
+            <span class="tag tag--level">Intermediate</span>
+            <span class="tag tag--level">1+ year experience</span>
+          </div>
+        </div>
+
+        <div class="reveal skillbar" style="transition-delay:160ms">
+          <div class="skillbar__head">
+            <p class="skillbar__name">Networking &amp; Security</p>
+            <p class="skillbar__pct">65%</p>
+          </div>
+          <div class="skillbar__track"><div class="skillbar__fill" style="width:65%"></div></div>
+          <div class="skillbar__meta">
+            <span class="tag tag--level">Intermediate</span>
+            <span class="tag tag--level">CCNA in progress</span>
+          </div>
+        </div>
+
+        <div class="reveal skillbar" style="transition-delay:200ms">
+          <div class="skillbar__head">
+            <p class="skillbar__name">C &amp; Embedded Systems</p>
+            <p class="skillbar__pct">60%</p>
+          </div>
+          <div class="skillbar__track"><div class="skillbar__fill" style="width:60%"></div></div>
+          <div class="skillbar__meta">
+            <span class="tag tag--level">Intermediate</span>
+            <span class="tag tag--level">ARM &amp; FPGA/VHDL</span>
+          </div>
+        </div>
+
+        <div class="reveal skillbar skillbar--wide" style="transition-delay:240ms">
+          <div class="skillbar__head">
+            <p class="skillbar__name">Full-Stack Web Development</p>
+            <p class="skillbar__pct">55%</p>
+          </div>
+          <div class="skillbar__track"><div class="skillbar__fill" style="width:55%"></div></div>
+          <div class="skillbar__meta">
+            <span class="tag tag--level">Familiar</span>
+            <span class="tag tag--level">MERN stack</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Contact ===================== -->
+  <section id="contact" class="section section--bg">
+    <div class="container contact-inner">
+      <div class="reveal">
+        <div class="recruiter-cta">
+          <div class="recruiter-cta__body">
+            <span class="status-pill status-pill--static">
+              <span class="status-dot"><span class="status-dot__core"></span></span>
+              OPEN TO OPPORTUNITIES
+            </span>
+            <h3>Looking to work together?</h3>
+            <p>I'm actively looking for Summer 2027 internships in cloud security, detection engineering, or security architecture — reach out if you're hiring or just want to talk shop.</p>
+          </div>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Download Resume
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="reveal" style="transition-delay:80ms">
+          <div class="eyebrow">
+            <span class="eyebrow__dot"></span>
+            <p class="eyebrow__text">05. Contact</p>
+          </div>
+          <h2 class="section-heading">Get in Touch</h2>
+          <p class="section-sub" style="max-width:420px">Reach out directly, or use the form.</p>
+
+          <div class="contact-channels">
+            <div class="contact-channel">
+              <span class="contact-channel__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+              </span>
+              <div>
+                <p class="contact-channel__label">Email</p>
+                <p class="contact-channel__value">you@example.com</p>
+              </div>
+            </div>
+            <div class="contact-channel">
+              <span class="contact-channel__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <div>
+                <p class="contact-channel__label">Location</p>
+                <p class="contact-channel__value">Victor, NY (Remote)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay:140ms">
+          <form class="terminal-form card" id="contactForm">
+            <div class="terminal-form__head">
+              <div class="terminal-dots"><span></span><span></span><span></span></div>
+              <p class="terminal-form__filename">MESSAGE.SH</p>
+            </div>
+
+            <label>
+              <span>$ YOUR_EMAIL:</span>
+              <input type="email" required placeholder="you@example.com" />
+            </label>
+
+            <label>
+              <span>$ COMPOSE_MESSAGE:</span>
+              <textarea required rows="4" placeholder="Say hello..."></textarea>
+            </label>
+
+            <div class="terminal-form__footer">
+              <p class="terminal-form__note">[ this form does not send yet ]</p>
+              <button type="submit" class="btn btn-primary">
+                Send
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-brand__badge">KP</span>
+        <span class="footer-brand__name">KRISH PUWAR</span>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/krishpuw" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="icon-btn" style="display:inline-flex">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="icon" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.17.69-3.84-1.34-3.84-1.34-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.94.1-.73.4-1.24.72-1.52-2.53-.29-5.19-1.27-5.19-5.63 0-1.24.44-2.26 1.17-3.06-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.17a10.9 10.9 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.57.23 2.73.11 3.02.73.8 1.17 1.82 1.17 3.06 0 4.37-2.66 5.34-5.2 5.62.41.36.77 1.06.77 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A11.26 11.26 0 0 0 23.25 11.75C23.25 5.48 18.27.5 12 .5Z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="icon-btn" style="display:inline-flex">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="icon" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+        </a>
+        <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="icon-btn" style="display:inline-flex">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="icon" aria-hidden="true"><path d="M18.9 2H22l-7.4 8.5L23.3 22h-6.8l-5.3-6.9L5 22H1.9l7.9-9.1L1 2h7l4.8 6.3Zm-1.2 18h1.9L6.4 4H4.4Z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Krish Puwar.</p>
+      <a href="#top">
+        Back to top
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
