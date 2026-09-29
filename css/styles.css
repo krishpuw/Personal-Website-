@@ -713,9 +713,8 @@ textarea {
 }
 
 .hero-chip--2 {
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 24px;
+  bottom: 32px;
 }
 
 .hero-chip--3 {
@@ -727,6 +726,10 @@ textarea {
   .hero-chip--1 {
     left: 16px;
     top: 40px;
+  }
+  .hero-chip--2 {
+    right: 40px;
+    bottom: 40px;
   }
   .hero-chip--3 {
     left: 40px;

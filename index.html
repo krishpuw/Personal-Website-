@@ -707,7 +707,7 @@
         </div>
 
         <div class="reveal" style="transition-delay:140ms">
-          <form class="terminal-form card" id="contactForm">
+          <form class="terminal-form card" id="contactForm" action="https://formsubmit.co/ajax/krishpuwar.jobs@gmail.com" method="POST">
             <div class="terminal-form__head">
               <div class="terminal-dots"><span></span><span></span><span></span></div>
               <p class="terminal-form__filename">MESSAGE.SH</p>
@@ -715,17 +715,21 @@
 
             <label>
               <span>$ YOUR_EMAIL:</span>
-              <input type="email" required placeholder="you@example.com" />
+              <input type="email" name="email" required placeholder="you@example.com" />
             </label>
 
             <label>
               <span>$ COMPOSE_MESSAGE:</span>
-              <textarea required rows="4" placeholder="Say hello..."></textarea>
+              <textarea name="message" required rows="4" placeholder="Say hello..."></textarea>
             </label>
 
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+            <input type="hidden" name="_subject" value="New message from portfolio site" />
+            <input type="hidden" name="_template" value="table" />
+
             <div class="terminal-form__footer">
-              <p class="terminal-form__note">[ this form does not send yet ]</p>
-              <button type="submit" class="btn btn-primary">
+              <p class="terminal-form__note" id="contactFormNote">[ sends straight to my inbox ]</p>
+              <button type="submit" class="btn btn-primary" id="contactFormSubmit">
                 Send
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>

@@ -98,11 +98,47 @@
     });
   }
 
-  // ---------- Contact form (no backend yet) ----------
+  // ---------- Contact form (wired to FormSubmit) ----------
   var contactForm = document.getElementById("contactForm");
   if (contactForm) {
+    var contactNote = document.getElementById("contactFormNote");
+    var contactSubmitBtn = document.getElementById("contactFormSubmit");
+    var contactNoteDefault = contactNote ? contactNote.textContent : "";
+
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
+
+      if (contactSubmitBtn) contactSubmitBtn.disabled = true;
+      if (contactNote) contactNote.textContent = "[ sending... ]";
+
+      var formData = new FormData(contactForm);
+
+      fetch(contactForm.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      })
+        .then(function (response) {
+          if (!response.ok) throw new Error("Request failed");
+          return response.json();
+        })
+        .then(function () {
+          if (contactNote) {
+            contactNote.textContent = "[ message sent — thanks for reaching out! ]";
+          }
+          contactForm.reset();
+        })
+        .catch(function () {
+          if (contactNote) {
+            contactNote.textContent = "[ something went wrong — email me directly instead ]";
+          }
+        })
+        .finally(function () {
+          if (contactSubmitBtn) contactSubmitBtn.disabled = false;
+          setTimeout(function () {
+            if (contactNote) contactNote.textContent = contactNoteDefault;
+          }, 6000);
+        });
     });
   }
 })();
