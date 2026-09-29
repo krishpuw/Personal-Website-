@@ -712,14 +712,20 @@ textarea {
   top: 32px;
 }
 
-.hero-chip--2 {
-  right: 24px;
-  bottom: 32px;
+.hero-chip-row {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
-.hero-chip--3 {
-  left: 24px;
-  bottom: 32px;
+.hero-chip-row .hero-chip {
+  position: static;
 }
 
 @media (min-width: 640px) {
@@ -727,13 +733,10 @@ textarea {
     left: 16px;
     top: 40px;
   }
-  .hero-chip--2 {
-    right: 40px;
-    bottom: 40px;
-  }
-  .hero-chip--3 {
-    left: 40px;
-    bottom: 40px;
+  .hero-chip-row {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
   }
 }
 
