@@ -637,8 +637,8 @@ textarea {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 55%;
-  height: 55%;
+  width: 50%;
+  height: 50%;
   transform: translate(-50%, -50%);
   border-radius: 999px;
   border: 2px solid var(--accent);
@@ -712,14 +712,24 @@ textarea {
   top: 32px;
 }
 
+/* Certification badges: stacked in the bottom-left corner, below the portrait */
+.hero-chip--2,
+.hero-chip--3 {
+  left: 11px;
+  padding: 6px 10px;
+}
+
+.hero-chip--2 .hero-chip__label,
+.hero-chip--3 .hero-chip__label {
+  font-size: 10px;
+}
+
 .hero-chip--2 {
-  right: 15px;
-  bottom: 16px;
+  bottom: 40px;
 }
 
 .hero-chip--3 {
-  left: 11px;
-  bottom: 16px;
+  bottom: 10px;
 }
 
 @media (min-width: 640px) {
@@ -727,13 +737,20 @@ textarea {
     left: 16px;
     top: 40px;
   }
-  .hero-chip--2 {
-    right: 20px;
-    bottom: 20px;
-  }
+  .hero-chip--2,
   .hero-chip--3 {
     left: 20px;
-    bottom: 20px;
+    padding: 8px 12px;
+  }
+  .hero-chip--2 .hero-chip__label,
+  .hero-chip--3 .hero-chip__label {
+    font-size: 11px;
+  }
+  .hero-chip--2 {
+    bottom: 54px;
+  }
+  .hero-chip--3 {
+    bottom: 16px;
   }
 }
 
