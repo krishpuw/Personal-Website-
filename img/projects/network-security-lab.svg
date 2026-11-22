@@ -1,0 +1,97 @@
+<svg viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono','Fira Code','DejaVu Sans Mono',monospace">
+  <defs>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#1e2942"/>
+    </pattern>
+    <marker id="aRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#f43f5e"/></marker>
+    <marker id="aCyan" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#00f0ff"/></marker>
+    <marker id="aPurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#8b5cf6"/></marker>
+  </defs>
+
+  <rect width="1200" height="720" fill="#070a10"/>
+  <rect width="1200" height="720" fill="url(#dots)"/>
+  <text x="24" y="34" fill="#6b7280" font-size="12" letter-spacing="2">AZURE NETWORK SECURITY LAB · BICEP IaC · SENTINEL</text>
+
+  <!-- Internet -->
+  <rect x="40" y="70" width="170" height="56" rx="8" fill="#11192e" stroke="#f43f5e" stroke-width="1.4"/>
+  <text x="125" y="94" text-anchor="middle" fill="#f3f4f6" font-size="14" font-weight="700">INTERNET</text>
+  <text x="125" y="113" text-anchor="middle" fill="#9ca3af" font-size="10">SSH brute-force bots</text>
+
+  <!-- VNet -->
+  <rect x="250" y="56" width="570" height="490" rx="12" fill="#0d1321" stroke="#3b82f6" stroke-width="1.4" stroke-dasharray="6 5"/>
+  <text x="270" y="82" fill="#3b82f6" font-size="12" font-weight="700">vnet-seclab · 10.0.0.0/16</text>
+  <text x="800" y="82" text-anchor="end" fill="#6b7280" font-size="10">NSG per subnet · default deny-all</text>
+
+  <!-- Subnets -->
+  <g font-size="10">
+    <rect x="275" y="100" width="245" height="78" rx="8" fill="#11192e" stroke="#00f0ff" stroke-width="1.2"/>
+    <text x="290" y="124" fill="#f3f4f6" font-size="13" font-weight="700">LAN</text>
+    <text x="290" y="142" fill="#9ca3af">10.0.0.0/24</text>
+    <text x="290" y="162" fill="#6b7280">internal hosts</text>
+
+    <rect x="550" y="100" width="245" height="78" rx="8" fill="#11192e" stroke="#00f0ff" stroke-width="1.2"/>
+    <text x="565" y="124" fill="#f3f4f6" font-size="13" font-weight="700">DMZ</text>
+    <text x="565" y="142" fill="#9ca3af">10.0.1.0/26</text>
+    <text x="565" y="162" fill="#6b7280">443 from LAN only</text>
+
+    <rect x="275" y="240" width="245" height="78" rx="8" fill="#11192e" stroke="#00f0ff" stroke-width="1.2"/>
+    <text x="290" y="264" fill="#f3f4f6" font-size="13" font-weight="700">TARGETS</text>
+    <text x="290" y="282" fill="#9ca3af">10.0.1.64/27</text>
+    <text x="290" y="302" fill="#6b7280">no inbound from Internet</text>
+
+    <rect x="550" y="240" width="245" height="78" rx="8" fill="#11192e" stroke="#8b5cf6" stroke-width="1.2"/>
+    <text x="565" y="264" fill="#f3f4f6" font-size="13" font-weight="700">ATTACKER</text>
+    <text x="565" y="282" fill="#9ca3af">10.0.1.96/28</text>
+    <text x="565" y="302" fill="#6b7280">red-team box</text>
+
+    <rect x="275" y="400" width="520" height="118" rx="8" fill="#11192e" stroke="#f43f5e" stroke-width="1.4"/>
+    <text x="290" y="424" fill="#f3f4f6" font-size="13" font-weight="700">HONEYPOT · Cowrie SSH</text>
+    <text x="290" y="442" fill="#9ca3af">10.0.1.112/28 · Ubuntu 24.04 · public IP, port 22 open</text>
+    <text x="290" y="466" fill="#6b7280">outbound to VNet: denied</text>
+    <text x="290" y="484" fill="#6b7280">outbound allowed: Azure Monitor + web (80/443) only</text>
+    <text x="290" y="502" fill="#6b7280">auto-shutdown 23:00 · key-only admin SSH</text>
+  </g>
+
+  <!-- deny marks LAN -->
+  <g stroke="#f43f5e" stroke-width="1.6" fill="none">
+    <path d="M 397,240 L 397,184" stroke-dasharray="4 4"/>
+    <path d="M 672,240 L 470,184" stroke-dasharray="4 4"/>
+  </g>
+  <g fill="#f43f5e" font-size="14" font-weight="700">
+    <text x="389" y="216">✕</text>
+    <text x="566" y="216">✕</text>
+  </g>
+  <text x="404" y="226" fill="#f43f5e" font-size="9">deny to LAN</text>
+
+  <!-- attacker to targets allow -->
+  <path d="M 550,290 L 526,290" stroke="#8b5cf6" stroke-width="1.8" marker-end="url(#aPurple)"/>
+  <text x="524" y="282" fill="#8b5cf6" font-size="9">allow</text>
+
+  <!-- internet into honeypot -->
+  <path d="M 125,126 L 125,450 L 269,450" fill="none" stroke="#f43f5e" stroke-width="2" marker-end="url(#aRed)"/>
+  <text x="134" y="440" fill="#f43f5e" font-size="10">tcp/22</text>
+
+  <!-- pipeline -->
+  <path d="M 795,460 L 860,460" stroke="#00f0ff" stroke-width="2" marker-end="url(#aCyan)"/>
+  <text x="802" y="452" fill="#9ca3af" font-size="9">cowrie.json</text>
+
+  <g font-size="10">
+    <rect x="866" y="420" width="290" height="80" rx="8" fill="#11192e" stroke="#00f0ff" stroke-width="1.2"/>
+    <text x="882" y="444" fill="#f3f4f6" font-size="13" font-weight="700">Azure Monitor Agent</text>
+    <text x="882" y="462" fill="#9ca3af">data collection rule</text>
+    <text x="882" y="480" fill="#9ca3af">→ Log Analytics: CowrieRaw_CL</text>
+
+    <path d="M 1011,420 L 1011,330" stroke="#00f0ff" stroke-width="2" marker-end="url(#aCyan)"/>
+
+    <rect x="866" y="230" width="290" height="94" rx="8" fill="#11192e" stroke="#10b981" stroke-width="1.4"/>
+    <text x="882" y="254" fill="#f3f4f6" font-size="13" font-weight="700">Microsoft Sentinel</text>
+    <text x="882" y="274" fill="#9ca3af">KQL rule: ≥5 logins / 10 min</text>
+    <text x="882" y="292" fill="#9ca3af">per source IP · every 5 min</text>
+    <text x="882" y="312" fill="#10b981" font-weight="700">ALERT · MITRE T1110</text>
+
+    <rect x="866" y="100" width="290" height="80" rx="8" fill="#11192e" stroke="#6b7280" stroke-width="1"/>
+    <text x="882" y="124" fill="#f3f4f6" font-size="13" font-weight="700">Cost guardrails</text>
+    <text x="882" y="144" fill="#9ca3af">1 GB/day ingest cap</text>
+    <text x="882" y="162" fill="#9ca3af">monthly budget alerts</text>
+  </g>
+</svg>
